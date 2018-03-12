@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.ttf')  format('truetype');
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background-color: grey;
+
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-shadow: 0 5px 5px rgba(0,0,0,.5);
+}
+
+#center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+#wrapper {
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background: grey no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    transition: text-shadow 1s;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 5px 5px rgba(150, 150, 150, 0.3);
+}
+
+/* Clock */
+
+    #clock {
+        font-size: 10em;
+    }
+
+/* Date */
+
+    #date {
+        font-size: 3em;
+    }
+/* Weather */
+
+    #weather {
+        position: absolute;
+        top: 1em;
+        right: 2em;
+
+        font-size: 1em;
+        text-align: center;
+
+        display: none;
+    }
+
+    #weather .owf {
+        font-size: 5em;
+        margin-right: 1rem;
+    }
+
+    #weather div {
+        float: right;
+        position: relative;
+        top: 0.5rem;
+    }
+
+    #weather #temp {
+        font-size: 2em;
+    }
+
+    a#weather:visited, a#weather:link {
+        color: white;
+    }
+
+/* Feeds */
+
+    #feeds {
+        width: 30em;
+        height: 10em;
+        overflow-y: auto;
+
+        position: absolute;
+        bottom: 1em;
+        right: -19px;
+
+        cursor: pointer;
+
+        display: none;
+        opacity: 0.2;
+        transition: all  1s;
+    }
+
+    #feeds:hover, #feeds:focus { opacity: 1; }
+
+    #feeds ul {
+        list-style-type: none;
+        padding-right: 1em;
+        padding-left: 0;
+
+        display: none;
+    }
+
+    #feeds ul li {
+        border-bottom: 1px solid white;
+        padding: 0.5em;
+
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    #feeds ul li div { display: inline-block; }
+
+    #feeds a {
+        color: white;
+
+        display: block;
+        width: 100%;
+    }
+
+    #feeds img { margin-right: 0.5em; }
+    #feeds .blueName { font-weight: bold; }
+
+    #feeds .ca {
+        display: block;
+        color: #BDBDBD;
+        text-align: right;
+    }
+
+    #feeds .ca:first-letter { text-transform: capitalize; }
+
+/* links */
+
+    #links {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+    }
+
+    #links ul {
+        list-style-type: none;
+        padding: 0;
+        display: block;
+        clear: both;
+    }
+
+    #links ul li {
+        float: left;
+        margin: 0.2em;
+    }
+
+    #links img {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    #links a {
+        transition: opacity 0.5s;
+        opacity: 0.3;
+    }
+
+    #links a:hover, #links a:focus { opacity: 1; }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title>Lola | Options</title>
+		<link rel="stylesheet" href="assets/css/options.css">
+	</head>
+
+	<body>
+		<form>
+			<section>
+				<header>Votre nom</header>
+				<p>
+					<input type="text" id="name" placeholder="Votre nom" />
+				</p>
+			</section>
+
+			<section>
+				<header>Informations météo</header>
+
+				<p>
+					Identifiant de la ville <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a>.
+				</p>
+
+				<input type="number" id="weatherId" placeholder="2965139 pour Cork">
+
+				<p>
+					Clé API de <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a>.
+				</p>
+				<input type="text" id="weatherKey" placeholder="Clé d'API">
+			</section>
+
+
+			<section id="links">
+				<header>Liens rapides</header>
+
+				<p>
+					Liens à afficher en bas à gauche.
+				</p>
+
+				<section>
+					<input type="button" id="addCategory" value="Ajouter une catégorie"/>
+				</section>
+
+			</section>
+
+			<section>
+				<header>Notifications Personalisées</header>
+
+				<p>
+					Lien vers vos notifications personalisées parsées en JSON. Le lien doit contenir "http://" ou "https://".
+				<p>
+
+				<input type="text" id="feedsURL" placeholder="https://example.com">
+
+				<p>
+					Les notifications doivent être sous la forme suivante :
+				</p>
+
+				<code>
+					<pre>
+[
+	{
+		"img": "url_de_l_image",
+		"url": "url_de_destination"
+		"content": "Contenu en HTML",
+	},
+	{
+		...
+	}
+]
+					</pre>
+				</code>
+			</section>
+
+			<footer>
+				<button type="submit">Enregistrer</button>
+			</footer>
+		</form>
+
+		<section>
+			Cette extension utilise les fonds d'écran de <a href="https://momentumdash.com/" target="_blank">Momentum</a>. Ils sont la propriété de <a href="https://momentumdash.com/" target="_blank">Momentum</a>.			
+		</section>
+
+		<script src="assets/js/options.js"></script>
+	</body>
+</html>
